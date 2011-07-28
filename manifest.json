@@ -1,0 +1,11 @@
+{
+  "name": "Gorbachev",
+  "version": "0.1",
+  "description": "Tear down that paywall!",
+  "content_scripts": [
+    {
+      "matches": ["http://www.nytimes.com/*"],
+      "js": ["gorbachev.js"]
+    }
+  ]
+}
