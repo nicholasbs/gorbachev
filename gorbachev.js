@@ -11,4 +11,12 @@ if (/.*\?.*$/.test(loc.href)) { // Is there a query string?
 
   var encodedDoc = encodeURIComponent(doc);
   location.replace("data:text/html," + encodedDoc);
+} else { // Just hide ads
+  var ads1 = Array.prototype.slice.call(document.getElementsByClassName("singleAd")),
+      ads2 = Array.prototype.slice.call(document.getElementsByClassName("articleToolsSponsor")),
+      ads = ads1.concat(ads2);
+
+  for (var i=0; i<ads.length; i++) {
+    ads[i].style.cssText = "display: none;";
+  }
 }
