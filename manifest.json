@@ -4,7 +4,7 @@
   "description": "Tear down that paywall!",
   "content_scripts": [
     {
-      "matches": ["http://www.nytimes.com/*"],
+      "matches": ["http://*.nytimes.com/*"],
       "js": ["gorbachev.js"]
     }
   ]
